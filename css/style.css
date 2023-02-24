@@ -1,0 +1,165 @@
+/*Variables*/
+/*Mixins*/
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #191919;
+}
+
+.site {
+  display: grid;
+  grid-template-rows: 80px 80vh 10vh 80vh 10vh 80vh 20vh 20vh 60vh 20vh;
+  align-items: center;
+}
+
+header {
+  background-color: #f3f2ef;
+  height: 100%;
+  width: 100%;
+}
+header nav {
+  display: grid;
+  grid-template-columns: 20% auto 20%;
+  align-items: center;
+  background-color: #f3f2ef;
+  height: 100%;
+}
+header nav .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .logo img {
+  width: auto;
+  height: 60px;
+}
+header nav .nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .nav-links li {
+  margin: 0 2em;
+}
+header nav .nav-links li a {
+  color: #191919;
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+header nav .header-icons {
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header nav .header-icons i {
+  margin: 0 10px;
+}
+
+/* VIDEO INTRODUKTION */
+.introduction {
+  background-image: url(../img/SLET\ EFTER.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  z-index: 1;
+  text-align: center;
+}
+.title h1 {
+  color: #f3f2ef;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 54px;
+}
+.title h2 {
+  color: #f3f2ef;
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-size: 54px;
+}
+
+/* SLIDESHOW */
+.slideshow {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.slide {
+  position: relative;
+  display: none;
+}
+
+.slide-image {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-block: 0;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  height: 100%;
+}
+
+.slide-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.slide.is-active {
+  display: inline;
+}
+
+.dots-container {
+  z-index: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 5em;
+}
+
+.dot {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  margin: 0 0.5em;
+  background-color: #f3f2ef;
+  border-radius: 50%;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.dot.is-active,
+.dot:hover {
+  background-color: #60c6e6;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */

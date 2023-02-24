@@ -1,0 +1,39 @@
+/*Variables*/
+$light: #f3f2ef;
+$dark: #191919;
+$blue: #306373;
+$cyan: #60c6e6;
+$magenta: #9e92de;
+$pink: #dc5dd5;
+$margin: 2em;
+$padding: 1em;
+$font: 'Lato', sans-serif;
+$font-medium: 20px;
+$font-title: 54px;
+$width-height: 100%;
+
+
+/*Mixins*/
+@mixin space($justify: space-between, $align:center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin center($center: center, $align:center){
+    display: flex;
+    justify-content: $center;
+    align-items: $align;
+}
+
+@mixin nav-grid($col1: 20%, $col2: auto) {
+    display: grid;
+    grid-template-columns: $col1 $col2 $col1;
+    align-items: center;
+}
+
+@mixin site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 20vh, $sct4: 60vh) {
+    display: grid;
+    grid-template-rows: $header $sct1 $sct2 $sct1 $sct2 $sct1 $sct3 $sct3 $sct4 $sct3;
+    align-items: center;
+}
