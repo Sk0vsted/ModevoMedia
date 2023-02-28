@@ -8,7 +8,11 @@ body {
 }
 
 .site {
-    @include partial.site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 20vh, $sct4: 60vh);
+    @include partial.site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 25vh, $sct4: 60vh, $sct5: 40vh);
+
+    section {
+      height: 100%;
+    }
 }
 
 header {
@@ -26,7 +30,7 @@ header {
 
             img {
                 width: auto;
-                height: 60px;
+                height: 80px;
             }
         }
 
@@ -43,6 +47,11 @@ header {
                     font-weight: bold;
                     font-size: partial.$font-medium;
                     text-decoration: none;
+                    transition: .1s ease-in-out;
+                }
+
+                a:hover {
+                  color: partial.$cyan;
                 }
             }
         }
@@ -52,6 +61,15 @@ header {
             @include partial.center($center: center, $align:center);
             i {
                 margin: 0 10px;
+            }
+
+            a {
+              color: partial.$dark;
+              transition: .1s ease-in-out;
+            }
+
+            a:hover {
+              color: partial.$cyan;
             }
         }
     }
@@ -96,6 +114,20 @@ header {
     position: relative;
     height: 100%;
     width: 100%;
+
+    a {
+      @include partial.readbutton($border: 5px solid partial.$cyan);
+      font-family: partial.$font;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 5.5em;
+      transition: 0.2s ease-in-out
+    }
+
+    a:hover {
+      border: 5px solid partial.$pink;
+    }
   }
   
   .slide {
@@ -126,7 +158,7 @@ header {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 5em;
+    bottom: 3em;
   }
   
   .dot {
@@ -137,7 +169,7 @@ header {
     margin: 0 0.5em;
     background-color: partial.$light;
     border-radius: 50%;
-    transition: 0.6s ease;
+    transition: 0.2s ease;
     cursor: pointer;
   }
   
@@ -148,19 +180,261 @@ header {
   
   .fade {
     animation-name: fade;
-    animation-duration: 2s;
+    animation-duration: 1s;
   }
   
   @keyframes fade {
-    0% {
-      opacity: 0.0;
+    from {
+      opacity: 0;
     }
 
-    50% {
-        opacity: 0.5;
-    }
-
-    100% {
+    to {
       opacity: 1;
+    }
+  }
+
+  .about {
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../img/about.jpg);
+    background-position: 0 -300px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    a {
+      @include partial.readbutton($border: 5px solid partial.$cyan);
+      font-family: partial.$font;
+      margin: 40px 40px;
+      transition: 0.2s ease-in-out;
+    }
+
+    a:hover {
+      border: 5px solid partial.$pink;
+    }
+  }
+
+  .services {
+    width: 100%;
+    overflow: hidden;
+    background-image: url(../img/services.jpg);
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+
+    a {
+      @include partial.readbutton($border: 5px solid partial.$cyan);
+      font-family: partial.$font;
+      transition: 0.2s ease-in-out;
+      color: black;
+      width: 10%;
+    }
+
+    h3 {
+      font-family: partial.$font;
+      font-size: 42px;
+      margin: 0 0 10px 0;
+    }
+
+    a:hover {
+      border: 5px solid partial.$pink;
+    }
+  }
+
+  .text-section {
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    color: partial.$light;
+    text-align: center;
+    font-family: "rooney-sans", sans-serif;
+
+    h4 {
+      margin: 15px 0 0 0;
+      font-size: 24px;
+    }
+
+    p {
+      margin: 1em 20em;
+    }
+
+    a {
+      @include partial.readbutton($border: 5px solid partial.$cyan);
+      font-family: partial.$font;
+      transition: 0.2s ease-in-out;
+      width: 10%;
+      margin: 0 0 10px 0
+    }
+
+    a:hover {
+      border: 5px solid partial.$pink;
+    }
+  }
+
+  .quote {
+    background-image: url(../img/quote.jpg);
+    background-position: 0 -400px;
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    color: partial.$light;
+    text-align: center;
+    padding: 0 30%;
+    font-family: partial.$font;
+
+    h5 {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    margin: 0 7em;
+    font-family: partial.$font;
+
+    div {
+      width: 100%;
+      color: partial.$light;
+    }
+
+    .footer-left {
+      @include partial.center($center: flex-start, $align:flex-start);
+      flex-direction: column;
+
+      .footer-links {
+        @include partial.center($center: space-between, $align:flex-start);
+        flex-direction: column;
+        height: 70%;
+        width: 100%;
+      }
+
+      h6 {
+        font-size: 20px;
+        margin: 1px 0;
+      }
+
+      a {
+        color: partial.$light;
+        text-decoration: none;
+        transition: .2s ease-in-out;
+      }
+
+      a:hover {
+        color: partial.$cyan;
+      }
+
+      a:nth-of-type(5) {
+        margin: 0 0 20px 0;
+      }
+    }
+
+    .footer-middle {
+      @include partial.center($center: center, $align:center);
+      flex-direction: column;
+      height: 100%;
+      margin: 1em 0 0 0;
+
+      .socials {
+        @include partial.center($center: center, $align:center);
+        width: 50%;
+
+        i {
+          margin: 0 15px;
+          font-size: 40px;
+          color: partial.$light;
+          transition: .2s ease-in;
+        }
+
+        i:hover {
+          color: partial.$cyan;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h5 {
+          margin: 50px 0 0 0;
+          font-size: 30px;
+        }
+
+        input {
+          border-radius: 10px;
+          border: none;
+          text-align: center;
+          padding: 5px 0;
+          margin: 0 0 10px 0;
+          font-size: 18px;
+        }
+
+        button {
+        width: 50%;
+        border-radius: 10px;
+        border: none;
+        padding: 2px 0;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        }
+
+        button:hover {
+          background-color: partial.$cyan;
+        }
+
+      }
+
+      #Layer_2 {
+        width: 5%;
+        margin-top: 20px;
+      }
+
+      .policy {
+        @include partial.center($center: center, $align:flex-end);
+        width: 100%;
+        margin: 20px 0 10px 0;
+
+        a, p {
+          margin: 0 10px;
+          font-family: partial.$font;
+          text-decoration: none;
+          color: partial.$light;
+          transition: .2s ease-in-out;
+        }
+
+        a:hover {
+          color: partial.$cyan;
+        }
+      }
+    }
+
+    .footer-right {
+      @include partial.center($center: space-between, $align:flex-end);
+      flex-direction: column;
+
+      div {
+        margin: 0 0 20px 0;
+      }     
+
+      .navigation, .kompetencer {
+        @include partial.center($center: center, $align:flex-start);
+        flex-direction: column;
+
+        h6 {
+          font-size: 20px;
+          margin: 0 0;
+        }
+  
+        a {
+          color: partial.$light;
+          text-decoration: none;
+          margin: 1px 0;
+          transition: .2s ease-in-out;
+        }
+
+        a:hover {
+          color: partial.$cyan;
+        }
+      }
     }
   }

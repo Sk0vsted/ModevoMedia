@@ -7,7 +7,7 @@ $magenta: #9e92de;
 $pink: #dc5dd5;
 $margin: 2em;
 $padding: 1em;
-$font: 'Lato', sans-serif;
+$font: 'rooney-sans', sans-serif;
 $font-medium: 20px;
 $font-title: 54px;
 $width-height: 100%;
@@ -32,8 +32,22 @@ $width-height: 100%;
     align-items: center;
 }
 
-@mixin site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 20vh, $sct4: 60vh) {
+@mixin site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 25vh, $sct4: 60vh, $sct5: 40vh) {
     display: grid;
-    grid-template-rows: $header $sct1 $sct2 $sct1 $sct2 $sct1 $sct3 $sct3 $sct4 $sct3;
+    grid-template-rows: $header $sct1 $sct2 $sct1 $sct2 $sct1 $sct3 $sct3 $sct4 $sct5;
     align-items: center;
+}
+
+@mixin readbutton($border: 2px solid $cyan) {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: $border;
+    z-index: 3;
+    width: 12%;
+    padding: 10px 10px;
+    font-size: 22px;
+    text-decoration: none;
+    border-radius: 10px;
 }
