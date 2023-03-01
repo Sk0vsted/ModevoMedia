@@ -9,7 +9,7 @@ body {
 
 .site {
   display: grid;
-  grid-template-rows: 80px 80vh 10vh 80vh 10vh 80vh 25vh 25vh 60vh 40vh;
+  grid-template-rows: 80px 85vh 10vh 85vh 10vh 85vh 30vh 30vh 65vh 45vh;
   align-items: center;
 }
 .site section {
@@ -33,9 +33,13 @@ header nav .logo {
   justify-content: center;
   align-items: center;
 }
+header nav .logo .finger {
+  height: 70px;
+  margin: 0 10px;
+}
 header nav .logo img {
   width: auto;
-  height: 80px;
+  height: 75px;
 }
 header nav .nav-links {
   list-style: none;
@@ -453,4 +457,16 @@ footer .footer-right .navigation a, footer .footer-right .kompetencer a {
 }
 footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:hover {
   color: #60c6e6;
+}
+
+.bottom-footer {
+  background-color: #f3f2ef;
+  height: 100%;
+}
+.bottom-footer h6 {
+  font-size: 16px;
+  padding: 10px 0;
+  margin: 0;
+  text-align: center;
+  font-family: "rooney-sans", sans-serif;
 }/*# sourceMappingURL=style.css.map */

@@ -8,7 +8,7 @@ body {
 }
 
 .site {
-    @include partial.site-grid($header: 80px, $sct1: 80vh, $sct2: 10vh, $sct3: 25vh, $sct4: 60vh, $sct5: 40vh);
+    @include partial.site-grid($header: 80px, $sct1: 85vh, $sct2: 10vh, $sct3: 30vh, $sct4: 65vh, $sct5: 45vh);
 
     section {
       height: 100%;
@@ -28,9 +28,14 @@ header {
         .logo {
             @include partial.center($center: center, $align:center);
 
+            .finger {
+              height: 70px;
+              margin: 0 10px;
+            }
+
             img {
                 width: auto;
-                height: 80px;
+                height: 75px;
             }
         }
 
@@ -436,5 +441,18 @@ header {
           color: partial.$cyan;
         }
       }
+    }
+  }
+
+  .bottom-footer {
+    background-color: partial.$light;
+    height: 100%;
+
+    h6 {
+      font-size: 16px;
+      padding: 10px 0;
+      margin: 0;
+      text-align: center;
+      font-family: partial.$font;
     }
   }
