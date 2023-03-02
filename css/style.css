@@ -61,6 +61,12 @@ header nav .nav-links li a {
 header nav .nav-links li a:hover {
   color: #60c6e6;
 }
+header nav burger {
+  display: none;
+}
+header nav .nav-links.open {
+  display: none;
+}
 header nav .header-icons {
   font-size: 25px;
   display: flex;
@@ -471,4 +477,107 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   margin: 0;
   text-align: center;
   font-family: "rooney-sans", sans-serif;
+}
+
+@media screen and (max-width: 750px) {
+  .site {
+    overflow: auto;
+  }
+  .site section {
+    width: 100%;
+  }
+  header nav {
+    display: flex;
+    overflow: hidden;
+  }
+  header nav .logo img {
+    height: 60px;
+  }
+  header nav .logo .finger {
+    height: 55px;
+  }
+  header nav .header-icons {
+    display: none;
+  }
+  header nav .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    height: calc(100vh - 60px);
+    background-color: #191919;
+    z-index: 1;
+    transform: translateX(100%);
+    transition: right 0.3s ease;
+  }
+  header nav .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    transform: translateX(0);
+  }
+  header nav .nav-links li {
+    margin: 20px 0;
+    text-align: right;
+    width: 90%;
+    border-bottom: 2px solid #f3f2ef;
+  }
+  header nav .nav-links li a {
+    color: #f3f2ef;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    padding: 0 20px 0 0;
+  }
+  header nav .nav-links li a:hover {
+    color: #60c6e6;
+  }
+  header nav .burger {
+    display: block;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 2;
+  }
+  header nav .burger span {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #191919;
+    border-radius: 4px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in-out;
+  }
+  header nav .burger span:nth-child(1) {
+    top: 0px;
+  }
+  header nav .burger span:nth-child(2) {
+    top: 12px;
+  }
+  header nav .burger span:nth-child(3) {
+    top: 24px;
+  }
+  header nav .burger.open span:nth-child(1) {
+    top: 12px;
+    transform: rotate(45deg);
+  }
+  header nav .burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+  header nav .burger.open span:nth-child(3) {
+    top: 12px;
+    transform: rotate(-45deg);
+  }
+  .introduction {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */

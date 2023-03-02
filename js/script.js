@@ -1,4 +1,6 @@
 const dots = Array.from(document.querySelectorAll(".dot"));
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
 
 let slideIndex = 1;
 
@@ -32,3 +34,21 @@ function showSlides(n) {
   dots[slideIndex - 1].classList.add("is-active");
 }
 dots.forEach((dot) => dot.addEventListener("click", currentSlide));
+
+function toggleNav() {
+  navLinks.classList.toggle('active');
+}
+
+burger.addEventListener('click', () => {
+  const mediaQuery = window.matchMedia('(max-width: 750px)');
+  if (mediaQuery.matches) {
+    toggleNav();
+  }
+});
+
+window.addEventListener('resize', () => {
+  const mediaQuery = window.matchMedia('(max-width: 750px)');
+  if (!mediaQuery.matches) {
+    navLinks.classList.remove('active');
+  }
+});

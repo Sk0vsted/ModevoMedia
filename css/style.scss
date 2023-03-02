@@ -61,6 +61,14 @@ header {
             }
         }
 
+        burger {
+          display: none;
+        }
+
+        .nav-links.open {
+          display: none;
+        }
+
         .header-icons {
             font-size: 25px;
             @include partial.center($center: center, $align:center);
@@ -134,7 +142,7 @@ header {
     a:hover {
       border: 5px solid partial.$pink;
     }
-  }
+}
   
   .slide {
     position: relative;
@@ -458,3 +466,131 @@ header {
       font-family: partial.$font;
     }
   }
+
+@media screen and (max-width: 750px) {
+
+  .site {
+    overflow: auto;
+  }
+
+    .site section {
+      width: 100%;
+    }
+
+    header {
+
+      nav {
+        display: flex;
+        overflow: hidden;
+
+        .logo {
+          img {
+            height: 60px;
+          }
+
+          .finger {
+            height: 55px;
+          }
+        }
+
+        .header-icons {
+          display: none;
+        }
+
+        .nav-links {
+          display: none;
+          position: absolute;
+          top: 65px;
+          right: 0;
+          width: 100%;
+          height: calc(100vh - 60px);
+          background-color: partial.$dark;
+          z-index: 1;
+          transform: translateX(100%);
+          transition: right 0.3s ease;
+        }
+
+        .nav-links.open {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          transform: translateX(0);
+        }
+
+        .nav-links li {
+          margin: 20px 0;
+          text-align: right;
+          width: 90%;
+          border-bottom: 2px solid partial.$light;
+        }
+      
+        .nav-links li a {
+          color: partial.$light;
+          font-size: 24px;
+          font-weight: bold;
+          text-decoration: none;
+          transition: color 0.2s ease-in-out;
+          padding: 0 20px 0 0;
+        }
+      
+        .nav-links li a:hover {
+          color: partial.$cyan;
+        }
+
+        .burger {
+          display: block;
+          position: absolute;
+          top: 25px;
+          right: 20px;
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          z-index: 2;
+        }
+      
+        .burger span {
+          display: block;
+          position: absolute;
+          height: 4px;
+          width: 100%;
+          background-color: partial.$dark;
+          border-radius: 4px;
+          opacity: 1;
+          left: 0;
+          transform: rotate(0deg);
+          transition: all 0.2s ease-in-out;
+        }
+      
+        .burger span:nth-child(1) {
+          top: 0px;
+        }
+      
+        .burger span:nth-child(2) {
+          top: 12px;
+        }
+      
+        .burger span:nth-child(3) {
+          top: 24px;
+        }
+      
+        .burger.open span:nth-child(1) {
+          top: 12px;
+          transform: rotate(45deg);
+        }
+      
+        .burger.open span:nth-child(2) {
+          opacity: 0;
+        }
+      
+        .burger.open span:nth-child(3) {
+          top: 12px;
+          transform: rotate(-45deg);
+      }
+    }
+  }
+
+  .introduction {
+    width: 100%;
+  }
+}
