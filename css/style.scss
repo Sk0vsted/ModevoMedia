@@ -1,141 +1,120 @@
 @use 'partial';
 
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: partial.$dark;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: partial.$semi-dark;
 }
 
-.site {
-    @include partial.site-grid($header: 80px, $sct1: 85vh, $sct2: 10vh, $sct3: 30vh, $sct4: 65vh, $sct5: 45vh);
-
-    section {
-      height: 100%;
-    }
+a, h1, p, h2, h3, h4, h5, h6 {
+  font-family: partial.$font;
 }
 
 header {
+  height: 80px;
+  width: 100%;
+  overflow-x: hidden;
+
+  nav {
+    @include partial.height($width-height: 100%);
     background-color: partial.$light;
-    height: 100%;
-    width: 100%;
+    display: grid;
+    grid-template-columns: 25% auto 25%;
+    overflow: hidden;
 
-    nav {
-        @include partial.nav-grid($col1: 20%, $col2: auto);
-        background-color: partial.$light;
-        height: 100%;
-        
-        .logo {
-            @include partial.center($center: center, $align:center);
+    .logo {
+      @include partial.center($center: center, $align:center);
+      @include partial.height($width-height: 100%);
 
-            .finger {
-              height: 70px;
-              margin: 0 10px;
-            }
-
-            img {
-                width: auto;
-                height: 75px;
-            }
-        }
-
-        .nav-links {
-            list-style: none;
-            @include partial.center($center: center, $align:center);
-
-            li {
-                margin: 0 partial.$margin;
-
-                a {
-                    color: partial.$dark;
-                    font-family: partial.$font;
-                    font-weight: bold;
-                    font-size: partial.$font-medium;
-                    text-decoration: none;
-                    transition: .1s ease-in-out;
-                }
-
-                a:hover {
-                  color: partial.$cyan;
-                }
-            }
-        }
-
-        .header-icons {
-            font-size: 25px;
-            @include partial.center($center: center, $align:center);
-            i {
-                margin: 0 10px;
-            }
-
-            a {
-              color: partial.$dark;
-              transition: .1s ease-in-out;
-            }
-
-            a:hover {
-              color: partial.$cyan;
-            }
-        }
-    }
-}
-
-/* VIDEO INTRODUKTION */
-
-.introduction {
-    background-image: url(../img/SLET\ EFTER.jpg);
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
-
-.title {
-    width: 100%;
-    height: 100%;
-    @include partial.center($center: center, $align:center);
-    background-color: partial.$dark;
-    z-index: 1;
-    text-align: center;
-
-    h1 {
-        color: partial.$light;
-        font-family: partial.$font;
-        font-weight: normal;
-        font-size: partial.$font-title;
+      img {
+        height: 65px;
+        margin: 0 10px 0 0;
+      }
     }
 
-    h2 {
-        color: partial.$light;
-        font-family: partial.$font;
-        font-weight: normal;
-        font-size: partial.$font-title;
-    }
-    
-}
+    .nav-links {
+      display: flex;
+      list-style: none;
+      justify-content: space-evenly;
+      align-items: center;
+      overflow-x: hidden;
 
+      a {
+        text-decoration: none;
+        color: partial.$dark;
+        font-weight: bold;
+        font-size: 20px;
+        transition: ease-in-out .1s;
+      }
 
-/* SLIDESHOW */
-
-.slideshow {
-    position: relative;
-    height: 100%;
-    width: 100%;
-
-    a {
-      @include partial.readbutton($border: 5px solid partial.$cyan);
-      font-family: partial.$font;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 5.5em;
-      transition: 0.2s ease-in-out
+      a:hover {
+        color: partial.$cyan;
+      }
     }
 
-    a:hover {
-      border: 5px solid partial.$pink;
+    .header-icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        margin: 0 10px;
+        font-size: 26px;
+        color: partial.$dark;
+        transition: ease-in-out .1s;
+      }
+
+      i:hover {
+        color: partial.$cyan;
+      }
     }
   }
-  
+
+  #burger {
+    display: none;
+  }
+}
+
+.introduction {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/SLET.jpg);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 0 40px 0;
+
+  a {
+    @include partial.readbutton($border: 4px solid partial.$cyan);
+    width: 15vw;
+    font-size: 25px;
+    text-shadow: 2px 2px 5px #000;
+    transition: ease-in-out .2s;
+  }
+
+  a:hover {
+    background-color: partial.$cyan;
+    color: partial.$dark;
+    text-shadow: none;
+    animation: underlines 2s;
+  }
+
+
+}
+
+.title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
+  color: partial.$light;
+  text-align: center;
+  margin: 10px;
+  font-size: 48px;
+  font-weight: normal;
+}
+
+.slideshow {
+  @include partial.height($width-height: 100%);
+
   .slide {
     position: relative;
     display: none;
@@ -159,31 +138,6 @@ header {
     display: inline;
   }
   
-  .dots-container {
-    z-index: 2;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 3em;
-  }
-  
-  .dot {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    padding: 0;
-    margin: 0 0.5em;
-    background-color: partial.$light;
-    border-radius: 50%;
-    transition: 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .dot.is-active,
-  .dot:hover {
-    background-color: partial.$cyan;
-  }
-  
   .fade {
     animation-name: fade;
     animation-duration: 1s;
@@ -199,262 +153,922 @@ header {
     }
   }
 
-  .about {
+  .read-dots {
     width: 100%;
-    overflow: hidden;
-    background-image: url(../img/about.jpg);
-    background-position: 0 -300px;
+    position: absolute;
+    top: 170vh;
+    height: auto;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-
+    justify-content: center
+    ;
     a {
-      @include partial.readbutton($border: 5px solid partial.$cyan);
-      font-family: partial.$font;
-      margin: 40px 40px;
-      transition: 0.2s ease-in-out;
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 15vw;
+      font-size: 25px;
+      text-shadow: 2px 2px 5px #000;
+      transition: ease-in-out .2s;
     }
-
+  
     a:hover {
-      border: 5px solid partial.$pink;
-    }
-  }
-
-  .services {
-    width: 100%;
-    overflow: hidden;
-    background-image: url(../img/services.jpg);
-    background-position: center;
-    @include partial.center($center: center, $align:center);
-    flex-direction: column;
-
-    a {
-      @include partial.readbutton($border: 5px solid partial.$cyan);
-      font-family: partial.$font;
-      transition: 0.2s ease-in-out;
-      color: black;
-      width: 10%;
+      background-color: partial.$cyan;
+      color: partial.$dark;
+      text-shadow: none;
+      animation: underlines 2s;
     }
 
-    h3 {
-      font-family: partial.$font;
-      font-size: 42px;
-      margin: 0 0 10px 0;
-    }
-
-    a:hover {
-      border: 5px solid partial.$pink;
-    }
-  }
-
-  .text-section {
-    @include partial.center($center: center, $align:center);
-    flex-direction: column;
-    color: partial.$light;
-    text-align: center;
-    font-family: "rooney-sans", sans-serif;
-
-    h4 {
-      margin: 15px 0 0 0;
-      font-size: 24px;
-    }
-
-    p {
-      margin: 1em 20em;
-    }
-
-    a {
-      @include partial.readbutton($border: 5px solid partial.$cyan);
-      font-family: partial.$font;
-      transition: 0.2s ease-in-out;
-      width: 10%;
-      margin: 0 0 10px 0
-    }
-
-    a:hover {
-      border: 5px solid partial.$pink;
-    }
-  }
-
-  .quote {
-    background-image: url(../img/quote.jpg);
-    background-position: 0 -400px;
-    @include partial.center($center: center, $align:center);
-    flex-direction: column;
-    color: partial.$light;
-    text-align: center;
-    padding: 0 30%;
-    font-family: partial.$font;
-
-    h5 {
-      font-size: 24px;
-      margin: 0;
-    }
-  }
-
-  footer {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    margin: 0 7em;
-    font-family: partial.$font;
-
-    div {
+    .dots-container {
+      z-index: 2;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       width: 100%;
-      color: partial.$light;
+      height: 100%;
+      top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    
+    .dot {
+      display: inline-block;
+      width: 45px;
+      height: 45px;
+      padding: 0;
+      margin: 0 0.5em;
+      background-color: partial.$light;
+      border-radius: 50%;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .dot.is-active,
+    .dot:hover {
+      background-color: partial.$cyan;
+    }
+  }
+}
+
+.about {
+  @include partial.height($width-height: 100%);
+  height: 800px;
+  background-image: url(../img/about.jpg);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-position: center bottom;
+
+  a {
+    @include partial.readbutton($border: 4px solid partial.$cyan);
+    margin: 50px;
+    transition: ease-in-out .2s;
+  }
+
+  a:hover {
+    background-color: partial.$cyan;
+    color: partial.$dark;
+    text-shadow: none;
+    animation: underlines 2s;
+  }
+}
+
+.services {
+  @include partial.height($width-height: 100%);
+  background-image: url(../img/services.jpg);
+  height: 250px;
+  @include partial.center($center: center, $align:center);
+  flex-direction: column;
+
+  h3 {
+    margin: 0;
+    font-size: 42px;
+  }
+
+  a {
+    @include partial.readbutton($border: 4px solid partial.$cyan);
+    color: partial.$dark;
+    transition: ease-in-out .2s;
+  }
+
+  a:hover {
+    background-color: partial.$cyan;
+    color: partial.$dark;
+    text-shadow: none;
+    animation: underlines 2s;
+  }
+}
+
+.text-section {
+  @include partial.center($center: center, $align:center);
+  flex-direction: column;
+  text-align: center;
+  padding: 0 30%;
+  color: partial.$light;
+
+  h4 {
+    font-size: 28px;
+    margin: 1em 0 0.5em 0;
+  }
+
+  p {
+    font-weight: lighter;
+  }
+
+  a {
+    @include partial.readbutton($border: 4px solid partial.$cyan);
+    width: 12vw;
+    margin: 1em 0;
+    transition: ease-in-out .2s;
+  }
+
+  a:hover {
+    background-color: partial.$cyan;
+    color: partial.$dark;
+    text-shadow: none;
+    animation: underlines 2s;
+  }
+}
+
+.quote {
+  @include partial.height($width-height: 100%);
+  background-image: url(../img/quote.jpg);
+  height: 700px;
+  background-position: center -200px;
+  @include partial.center($center: center, $align:center);
+  flex-direction: column;
+  text-align: center;
+  color: partial.$light;
+
+  h5 {
+    font-size: 32px;
+    margin: 0;
+  }
+
+  p {
+    font-style: italic;
+    font-size: 18px;
+    font-weight: lighter;
+  }
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  padding: 30px 7em;
+  background-color: partial.$dark;
+  border: 1px solid #a1a1a1;
+
+  div {
+    width: 100%;
+    color: partial.$light;
+  }
+
+  .footer-left {
+    @include partial.center($center: flex-start, $align:flex-start);
+    flex-direction: column;
+
+    .footer-links {
+      @include partial.center($center: space-between, $align:flex-start);
+      flex-direction: column;
+      height: 70%;
+      width: 100%;
     }
 
-    .footer-left {
-      @include partial.center($center: flex-start, $align:flex-start);
-      flex-direction: column;
+    h6 {
+      font-size: 20px;
+      margin: 1px 0;
+    }
 
-      .footer-links {
-        @include partial.center($center: space-between, $align:flex-start);
-        flex-direction: column;
-        height: 70%;
-        width: 100%;
-      }
+    a {
+      color: partial.$light;
+      text-decoration: none;
+      transition: .2s ease-in-out;
+    }
 
-      h6 {
-        font-size: 20px;
-        margin: 1px 0;
-      }
+    a:hover {
+      color: partial.$cyan;
+    }
 
-      a {
+    a:nth-of-type(5) {
+      margin: 0 0 20px 0;
+    }
+  }
+
+  .footer-middle {
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    height: 100%;
+    margin: 1em 0 0 0;
+
+    .socials {
+      @include partial.center($center: center, $align:center);
+      width: 50%;
+
+      i {
+        margin: 0 15px;
+        font-size: 40px;
         color: partial.$light;
+        transition: .2s ease-in;
+      }
+
+      i:hover {
+        color: partial.$cyan;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h5 {
+        margin: 50px 0 0 0;
+        font-size: 30px;
+      }
+
+      input {
+        border-radius: 10px;
+        border: none;
+        text-align: center;
+        padding: 5px 0;
+        margin: 0 0 10px 0;
+        font-size: 18px;
+      }
+
+      button {
+      width: 50%;
+      border-radius: 10px;
+      border: none;
+      padding: 2px 0;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      }
+
+      button:hover {
+        background-color: partial.$cyan;
+      }
+    }
+
+    img {
+      width: 5%;
+      margin-top: 15px;
+    }
+
+    .policy {
+      @include partial.center($center: center, $align:flex-end);
+      width: 100%;
+      margin: 20px 0 10px 0;
+
+      a, p {
+        margin: 0 10px;
+        font-family: partial.$font;
         text-decoration: none;
+        color: partial.$light;
         transition: .2s ease-in-out;
       }
 
       a:hover {
         color: partial.$cyan;
       }
+    }
+  }
 
-      a:nth-of-type(5) {
-        margin: 0 0 20px 0;
+  .footer-right {
+    @include partial.center($center: space-between, $align:flex-end);
+    flex-direction: column;
+
+    div {
+      margin: 0 0 20px 0;
+    }     
+
+    .navigation, .kompetencer {
+      @include partial.center($center: center, $align:flex-start);
+      flex-direction: column;
+
+      h6 {
+        font-size: 20px;
+        margin: 0 0;
+      }
+
+      a {
+        color: partial.$light;
+        text-decoration: none;
+        margin: 1px 0;
+        transition: .2s ease-in-out;
+      }
+
+      a:hover {
+        color: partial.$cyan;
+      }
+    }
+  }
+}
+
+.bottom-footer {
+  background-color: partial.$light;
+  height: 100%;
+
+  h6 {
+    font-size: 16px;
+    padding: 10px 0;
+    margin: 0;
+    text-align: center;
+    font-family: partial.$font;
+  }
+}
+
+.about-intro {
+  width: 100%;
+  height: 80vh;
+  background-image: url(../img/about-bg.jpg);
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 0 40px 0;
+}
+
+.who {
+  height: 120vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 50% 50%;
+  padding: 2em 10em;
+  background-color: partial.$semi-dark;
+
+  .member {
+    margin: 1em 2em;
+    height: 100%;
+  
+    img {
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      object-position: center top;
+      position: relative;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 1;
+    }
+  
+    h2, p {
+      color: partial.$light;
+      font-family: partial.$font;
+      margin: 5px 0;
+      font-weight: lighter;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*MEDIA QUERY FOR TELEFON STARTER HER*/
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media screen and (max-width: 750px) {
+
+  header {
+    width: 100%;
+    height: 80px;
+    overflow-x: hidden;
+
+    nav {
+      @include partial.height($width-height: 100%);
+      background-color: partial.$light;
+      display: grid;
+      grid-template-columns: 80% 20%;
+
+      .logo {
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 1em;
+        justify-content: flex-start;
+
+        img {
+          height: 60px;
+        }
+
+        .finger {
+          display: none;
+        }
+      }
+
+      .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 10em;
+        top: 80px;
+        background-color: partial.$dark;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        transform: translateX(100%);
+        transition: 0.3s ease-in-out;
+        font-family: Bodoni Moda, sans-serif;
+        list-style: none;
+        margin: 0;
+        font-size: 30px;
+        text-align: end;
+        overflow: hidden;
+
+        li {
+          a{
+            color: partial.$light;
+            padding: 0 2em 0 0;
+            opacity: 0;
+            font-size: 25px;
+          }
+        }
+      }
+
+      .header-icons {
+        display: none;
+      }
+
+      #burger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        z-index: 2;
+      }
+    
+      #burger div {
+        width: 30px;
+        height: 4px;
+        background-color: rgb(19, 19, 19);
+        margin: 7px;
+        transition: all 0.3s ease;
+      }
+      
+      .nav-active {
+        transform: translateX(0%);
+        z-index: 2;
+      }
+
+      .a-active {
+        transform: translateX(0%);
+        z-index: 2;
+      }
+
+      @keyframes navLinkFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+            }
+        to{
+            opacity: 1;
+            transform: translateX(0px);
+          }
+      }
+
+      @keyframes navLinkUnderline{
+        from{
+          border-bottom: solid 2px partial.$light;
+          transform: translateX(100%);
+          width: 80%;
+        }
+
+        to {
+          border-bottom: solid 2px partial.$light;
+          transform: translateX(0%);
+          width: 80%;
+        }
+      }
+
+      .toggle .line1{
+        transform: rotate(-45deg) translate(-10px,5px);
+      }
+      .toggle .line2{
+          opacity: 0;
+      }
+      .toggle .line3{
+          transform: rotate(45deg) translate(-10px,-5px);
+      }
+    } 
+}
+
+  .introduction, .about-intro {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/SLET.jpg);
+    background-position: center;
+    @include partial.center($center: center, $align:flex-end);
+    padding: 0 0 40px 0;
+
+    a {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 40%;
+      text-shadow: 2px 2px 5px #000;
+    }
+  }
+
+  .title {
+    @include partial.height($width-height: 100%);
+    background-color: partial.$semi-dark;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: partial.$light;
+      text-align: center;
+      margin: 10px;
+      font-size: 36px;
+      font-weight: normal;
+    }
+  }
+
+  .slideshow {
+    @include partial.height($width-height: 100%);
+
+    .slide {
+      position: relative;
+      display: none;
+    }
+    
+    .slide-image {
+      position: relative;
+      display: flex;
+      width: 100%;
+      margin-block: 0;
+      margin-inline-start: 0;
+      height: 100%;
+    }
+    
+    .slide-image img {
+      max-width: 100%;
+      object-fit: cover;
+      height: 600px;
+    }
+    
+    .slide.is-active {
+      display: inline;
+    }
+
+    .read-dots {
+      @include partial.height($width-height: 100%);
+      position: absolute;
+      top: 1100px;
+      height: auto;
+
+      a {
+        @include partial.readbutton($border: 4px solid partial.$cyan);
+        width: 40%;
+        text-shadow: 2px 2px 5px #000;
+      }
+    }
+
+    .read-button {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 40%;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      text-shadow: 2px 2px 5px #000;
+    }
+    .dots-container {
+      z-index: 2;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      @include partial.height($width-height: 100%);
+      top: 80px;
+      @include partial.center($center: center, $align:flex-start);
+    }
+    
+    .dot {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      margin: 0 0.5em;
+      background-color: partial.$light;
+      border-radius: 50%;
+      transition: 0.2s ease;
+      cursor: pointer;
+    }
+    
+    .dot.is-active,
+    .dot:hover {
+      background-color: partial.$cyan;
+    }
+    
+    .fade {
+      animation-name: fade;
+      animation-duration: 1s;
+    }
+    
+    @keyframes fade {
+      from {
+        opacity: 0;
+      }
+  
+      to {
+        opacity: 1;
+      }
+    }
+  }
+
+  .about {
+    @include partial.height($width-height: 100%);
+    height: 500px;
+    background-image: url(../img/about.jpg);
+    object-fit: contain;
+    background-position: center;
+    background-size: 270%;
+    @include partial.center($center: center, $align:flex-end);
+    padding: 2em 0;
+    a {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 40%;
+      text-shadow: 2px 2px 5px #000;
+    }
+  }
+
+  .services {
+    @include partial.height($width-height: 100%);
+    background-image: url(../img/services.jpg);
+    height: 300px;
+    background-position: center;
+    background-size: 400% 100%;
+    object-fit: cover;
+    flex-direction: column;
+    @include partial.center($center: center, $align:center);
+
+    h3 {
+      margin: 0;
+      margin: 0 0 ;
+      font-size: 40px;
+      margin: 0;
+      position: absolute;
+    }
+    a {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 40%;
+      color: partial.$dark;
+      margin: 8em 0 0 0;
+    }
+  }
+
+  .text-section {
+    @include partial.height($width-height: 100%);
+    color: partial.$light;
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    padding: 0;
+
+    h4 {
+      font-size: 25px;
+      margin: 1em 10px 1em 10px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      margin: 0 5px;
+      text-align: center;
+    }
+
+    a {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 40%;
+      color: partial.$light;
+      margin: 1em 0;
+    }
+  }
+  .quote {
+    @include partial.height($width-height: 100%);
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    background-image: url(../img/quote.jpg);
+    background-position: center;
+    object-fit: cover;
+    height: 400px;
+    background-size: 200% 100%;
+
+    h5 {
+      font-size: 25px;
+      margin: 1em 5px 1em 5px;
+      text-align: center;
+      color: partial.$light;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 25px;
+      margin: 0 15px;
+      text-align: center;
+      color: partial.$light;
+      font-style: italic;
+      text-shadow: 2px 2px 5px #000;
+    }
+  }
+
+  footer {
+    border: partial.$light 1px solid;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    .footer-left {
+      order: 1;
+      padding: 0 0 0 3em;
+
+      h6 {
+        color: partial.$light;
+        font-size: 24px;
+        font-weight: normal;
+        margin: 2em 0 0.5em 0;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+          margin: 0 0 1em 0;
+          color: partial.$light;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: lighter;
+        }
       }
     }
 
     .footer-middle {
-      @include partial.center($center: center, $align:center);
+      order: 3;
+      display: flex;
       flex-direction: column;
-      height: 100%;
-      margin: 1em 0 0 0;
+      align-items: center;
+      margin: 4em 0 0 0;
 
       .socials {
-        @include partial.center($center: center, $align:center);
-        width: 50%;
-
-        i {
-          margin: 0 15px;
-          font-size: 40px;
+        a{
           color: partial.$light;
-          transition: .2s ease-in;
-        }
-
-        i:hover {
-          color: partial.$cyan;
+          font-size: 32px;
+          margin: 0 10px;
         }
       }
 
       form {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        flex-direction: column;
 
         h5 {
-          margin: 50px 0 0 0;
-          font-size: 30px;
+          font-size: 24px;
+          margin: 20px 0;
+          text-align: center;
+          color: partial.$light;
+          font-weight: lighter;
         }
 
         input {
-          border-radius: 10px;
           border: none;
+          font-size: 22px;
+          width: 75%;
+          border-radius: 10px;
           text-align: center;
-          padding: 5px 0;
-          margin: 0 0 10px 0;
-          font-size: 18px;
+          padding: 7px;
+          background-color: partial.$light;
         }
 
         button {
-        width: 50%;
-        border-radius: 10px;
-        border: none;
-        padding: 2px 0;
-        font-size: 18px;
-        cursor: pointer;
-        transition: 0.2s ease-in-out;
+          font-size: 22px;
+          width: 35%;
+          padding: 3px 10px;
+          border-radius: 10px;
+          border: none;
+          background-color: partial.$light;
+          margin: 15px 0 0 0;
+          color: #303030;
         }
-
-        button:hover {
-          background-color: partial.$cyan;
-        }
-
       }
 
-      #Layer_2 {
-        width: 5%;
-        margin-top: 20px;
+      img {
+        width: 15%;
+        margin: 20px 0;
       }
 
       .policy {
-        @include partial.center($center: center, $align:flex-end);
-        width: 100%;
-        margin: 20px 0 10px 0;
+        color: partial.$light;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
 
-        a, p {
-          margin: 0 10px;
-          font-family: partial.$font;
-          text-decoration: none;
-          color: partial.$light;
-          transition: .2s ease-in-out;
+        p {
+          font-size: 20px;
+          margin: 1em 0;
         }
 
-        a:hover {
-          color: partial.$cyan;
+        a {
+          text-decoration: none;
+          color: partial.$light;
+          margin: 5px 0;
         }
       }
     }
 
     .footer-right {
-      @include partial.center($center: space-between, $align:flex-end);
-      flex-direction: column;
-
-      div {
-        margin: 0 0 20px 0;
-      }     
+      order: 2;
+      padding: 0 0 0 3em;
+      overflow-x: hidden;
 
       .navigation, .kompetencer {
-        @include partial.center($center: center, $align:flex-start);
+        display: flex;
         flex-direction: column;
 
         h6 {
-          font-size: 20px;
-          margin: 0 0;
-        }
-  
-        a {
           color: partial.$light;
-          text-decoration: none;
-          margin: 1px 0;
-          transition: .2s ease-in-out;
+          font-size: 24px;
+          font-weight: normal;
+          margin: 2em 0 0.5em 0;
         }
 
-        a:hover {
-          color: partial.$cyan;
+        a {
+          margin: 0 0 10px 0;
+          color: partial.$light;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: lighter;  
         }
       }
     }
   }
 
   .bottom-footer {
+    text-align: center;
+    color: partial.$dark;
     background-color: partial.$light;
-    height: 100%;
-
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    
     h6 {
-      font-size: 16px;
-      padding: 10px 0;
       margin: 0;
-      text-align: center;
-      font-family: partial.$font;
+      font-size: 16px;
     }
   }
+
+  .about-intro {
+    background-image: url(../img/about-bg.jpg);
+  }
+
+  .who {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: partial.$semi-dark;
+    width: 100%;
+    padding: 0;
+  
+    .member {
+      height: 100%;
+      width: 90%;
+    
+      img {
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+      }
+    
+      h2, p {
+        color: partial.$light;
+        font-family: partial.$font;
+        margin: 5px 0;
+        font-weight: lighter;
+      }
+    }
+  }
+}

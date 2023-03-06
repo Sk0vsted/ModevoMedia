@@ -1,6 +1,7 @@
 /*Variables*/
 $light: #f3f2ef;
 $dark: #191919;
+$semi-dark: #292929;
 $blue: #306373;
 $cyan: #60c6e6;
 $magenta: #9e92de;
@@ -50,4 +51,13 @@ $width-height: 100%;
     font-size: 22px;
     text-decoration: none;
     border-radius: 10px;
+}
+
+@mixin hide() {
+    display: none;
+}
+
+@mixin height($width-height: 100%) {
+    width: $width-height;
+    height: $width-height;
 }
