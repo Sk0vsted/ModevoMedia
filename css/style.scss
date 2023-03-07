@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: partial.$semi-dark;
+  overflow-x: hidden
 }
 
 a, h1, p, h2, h3, h4, h5, h6 {
@@ -76,7 +77,7 @@ header {
   }
 }
 
-.introduction {
+.introduction, .about-intro, .services-intro {
   width: 100%;
   height: 80vh;
   background-image: url(../img/SLET.jpg);
@@ -519,6 +520,57 @@ footer {
   }
 }
 
+.services-intro {
+  background-image: url(../img/services-bg.jpg);
+}
+
+.service-list {
+  @include partial.height($width-height: 100%);
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 33% 33% 33%;
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 3em 0;
+
+    .service-text {
+      width: 90%;
+      color: partial.$light;
+
+      h2 {
+        font-size: 25px;
+        font-weight: lighter;
+        margin: 10px 0;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      a {
+        @include partial.readbutton($border: 4px solid partial.$cyan);
+        width: 25%;
+        font-size: 23px;
+        padding: 10px 0;
+        margin: 15px 0 0 0;
+        transition: ease-in-out .2s;
+      }
+
+      a:hover {
+        background-color: partial.$cyan;
+        color: partial.$dark;
+      }
+    }
+  
+    img {
+    width: 90%;
+    }
+  }
+}
+
 
 
 
@@ -551,29 +603,30 @@ footer {
   header {
     width: 100%;
     height: 80px;
-    overflow-x: hidden;
 
     nav {
       @include partial.height($width-height: 100%);
       background-color: partial.$light;
-      display: grid;
-      grid-template-columns: 80% 20%;
-
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
       .logo {
         display: flex;
         align-items: center;
         margin: 0 0 0 1em;
-        justify-content: flex-start;
-
+        justify-content: flex-end;
+        order: 2;
+    
         img {
           height: 60px;
         }
-
+    
         .finger {
           display: none;
         }
       }
-
+    
       .nav-links {
         position: absolute;
         right: 0px;
@@ -582,40 +635,44 @@ footer {
         background-color: partial.$dark;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: flex-start;
         width: 100%;
-        transform: translateX(100%);
+        transform: translateX(-100%);
         transition: 0.3s ease-in-out;
         font-family: Bodoni Moda, sans-serif;
         list-style: none;
         margin: 0;
         font-size: 30px;
-        text-align: end;
+        text-align: start;
         overflow: hidden;
-
+        padding: 0;
+        justify-content: space-around;
+    
         li {
-          a{
+          a {
             color: partial.$light;
-            padding: 0 2em 0 0;
+            padding: 0 0 0 2em;
             opacity: 0;
             font-size: 25px;
           }
         }
       }
-
+    
       .header-icons {
         display: none;
       }
-
+    
       #burger {
-        display: block;
+        display: inline;
         position: absolute;
         top: 20px;
-        right: 20px;
+        left: 20px;
         width: 40px;
         height: 40px;
         cursor: pointer;
         z-index: 2;
+        order: 1;
+        justify-self: start;
       }
     
       #burger div {
@@ -650,7 +707,7 @@ footer {
       @keyframes navLinkUnderline{
         from{
           border-bottom: solid 2px partial.$light;
-          transform: translateX(100%);
+          transform: translateX(-100%);
           width: 80%;
         }
 
@@ -673,7 +730,7 @@ footer {
     } 
 }
 
-  .introduction, .about-intro {
+  .introduction, .about-intro, .services-intro {
     width: 100%;
     height: 500px;
     background-image: url(../img/SLET.jpg);
@@ -1068,6 +1125,55 @@ footer {
         font-family: partial.$font;
         margin: 5px 0;
         font-weight: lighter;
+      }
+    }
+  }
+
+  .services-intro {
+    background-image: url(../img/services-bg.jpg);
+  }
+
+  .service-list {
+    @include partial.height($width-height: 100%);
+    display: inline;
+
+    .service {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3em 0;
+
+      .service-text {
+        width: 90%;
+        color: partial.$light;
+
+        h2 {
+          font-size: 25px;
+          font-weight: lighter;
+          margin: 10px 0;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        a {
+          @include partial.readbutton($border: 4px solid partial.$cyan);
+          width: 40%;
+          font-size: 20px;
+          padding: 5px 0;
+          margin: 10px 0 0 0;
+          transition: ease-in-out .2s;
+        }
+
+        a:hover {
+          background-color: partial.$cyan;
+          color: partial.$dark;
+        }
+      }
+    
+      img {
+      width: 90%;
       }
     }
   }
