@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://use.typekit.net/paa7hrh.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modevo Media | Services</title>
+    <title>Modevo Media | Kontakt Os</title>
 </head>
 <body>
     <div class="site">
@@ -39,69 +39,84 @@
             </nav>
         </header>
 
-        <section class="services-intro">
+        <section class="contact-intro">
           </section>
+        
+        <div class="contact-form">
+          <form>
+            <h1>Kontakt os</h1>
 
-        <section class="title">
-            <h1>Service og tilbehør</h1>
-        </section>
+            <div class="inputs">
+                <label class="visually-hidden" for="fornavn">Fornavn</label>
+                <input placeholder="Fornavn*" id="fornavn" type="text" required>
 
-        <section class="service-list">
-
-            <div class="service">
-                <img src="img/video-production.jpg" alt="Video Produktion">
-                <div class="service-text">
-                    <h2>Video Produktion</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
+                <label class="visually-hidden" for="efternavn">Efternavn</label>
+                <input placeholder="Efternavn*" id="efternavn" type="text" required>
             </div>
 
-            <div class="service">
-                <img src="img/branding.jpg" alt="Branding">
-                <div class="service-text">
-                    <h2>Branding</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
+            <div class="inputs">
+                <label class="visually-hidden" for="firmanavn">Firmanavn</label>
+                <input placeholder="Firmanavn" id="firmanavn" type="text">
+
+                <label class="visually-hidden" for="telefon">Telefon</label>
+                <input placeholder="Telefon*" id="telefon" type="tel" required>
             </div>
 
-            <div class="service">
-                <img src="img/sound.jpg" alt="Lyd redigering">
-                <div class="service-text">
-                    <h2>Lyd Redigering</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
+            <div class="inputs">
+                <label class="visually-hidden" for="mail">E-mail</label>
+                <input placeholder="E-mail*" id="mail" type="email" required>
+                <div></div>
             </div>
 
-            <div class="service">
-                <img src="img/marketing.jpg" alt="Digital Marketing">
-                <div class="service-text">
-                    <h2>Digital Marketing</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
-            </div>
+            <label for="kontaktform">
+                <fieldset class="valgimellem">
+                    <legend>Vælg venligst hvilke arbejdsområder der er tale om</legend>
 
-            <div class="service">
-                <img src="img/graphic.jpg" alt="Grafisk Design">
-                <div class="service-text">
-                    <h2>Grafisk Design</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
-            </div>
+                    <div>
+                        <input id="video-produktion" type="checkbox" name="ydelser" value="video-produktion">
+                        <label for="video-produktion">Video Produktion</label>
+                    </div>
 
-            <div class="service">
-                <img src="img/web.jpg" alt="Webdesign">
-                <div class="service-text">
-                    <h2>Webdesign</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque, odit? Hic commodi obcaecati dolores laborum iure quo eligendi alias dolore. Sit dolor culpa distinctio doloremque porro corrupti deserunt ipsam officiis.</p>
-                    <a href="#">Læs mere</a>
-                </div>
-            </div>
-        </section>
+                    <div>
+                        <input id="branding" type="checkbox" name="ydelser" value="branding">
+                        <label for="branding">Branding</label>
+                    </div>
+
+                    <div>
+                        <input id="lyd-redigering" type="checkbox" name="ydelser" value="lyd-redigering">
+                        <label for="lyd-redigering">Lyd Redigering</label>
+                    </div>
+
+                    <div>
+                        <input id="digital-marketing" type="checkbox" name="ydelser" value="digital-marketing">
+                        <label for="digital-marketing">Digital Marketing</label>
+                    </div>
+
+                    <div>
+                        <input id="grafisk-design" type="checkbox" name="ydelser" value="grafisk-design">
+                        <label for="grafisk-design">Grafisk Design</label>
+                    </div>
+
+                    <div>
+                        <input id="webdesign" type="checkbox" name="ydelser" value="webdesign">
+                        <label for="webdesign">Webdesign & Webudvikling</label>
+                    </div>
+
+                    <div>
+                        <input id="andet" type="checkbox" name="ydelser" value="andet">
+                        <label for="andet">Andet</label>
+                    </div>
+
+                </fieldset>
+                <label class="visually-hidden" for="besked">Besked</label>
+                <textarea placeholder="Besked*" id="besked" rows="8" cols="20"></textarea>
+
+                <input type="submit" name="submit" value="Send" onclick="videreSend()">
+            </label>
+          </form>
+        </div>
+
+        <div class="blank"></div>
 
     <footer>
         <div class="footer-left">
@@ -141,8 +156,8 @@
 
             <div class="navigation">
                 <h6>Navigation</h6>
-                <a href="index.html">- Hjem</a>
-                <a href="services.html">- Vores arbejde</a>
+                <a href="#">- Hjem</a>
+                <a href="#">- Vores arbejde</a>
                 <a href="#">- Om os</a>
                 <a href="#">- Cases</a>
                 <a href="#">- Kontakt os</a>

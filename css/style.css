@@ -71,7 +71,7 @@ header #burger {
   display: none;
 }
 
-.introduction, .about-intro, .services-intro {
+.introduction, .about-intro, .services-intro, .cases-intro, .contact-intro {
   width: 100%;
   height: 80vh;
   background-image: url(../img/SLET.jpg);
@@ -81,7 +81,7 @@ header #burger {
   align-items: flex-end;
   padding: 0 0 40px 0;
 }
-.introduction a, .about-intro a, .services-intro a {
+.introduction a, .about-intro a, .services-intro a, .cases-intro a, .contact-intro a {
   color: white;
   display: flex;
   justify-content: center;
@@ -98,7 +98,7 @@ header #burger {
   text-shadow: 2px 2px 5px #000;
   transition: ease-in-out 0.2s;
 }
-.introduction a:hover, .about-intro a:hover, .services-intro a:hover {
+.introduction a:hover, .about-intro a:hover, .services-intro a:hover, .cases-intro a:hover, .contact-intro a:hover {
   background-color: #60c6e6;
   color: #191919;
   text-shadow: none;
@@ -245,6 +245,7 @@ header #burger {
   width: 100%;
   height: 100%;
   background-image: url(../img/services.jpg);
+  background-position: center;
   height: 250px;
   display: flex;
   justify-content: center;
@@ -589,6 +590,232 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   width: 90%;
 }
 
+.cases-intro {
+  background-image: url(../img/cases-bg.jpg);
+  background-position: center right;
+}
+
+.cases {
+  margin: 1em 0;
+}
+.cases .case1 .case-text, .cases .case2 .case-text, .cases .case3 .case-text, .cases .case4 .case-text {
+  color: #f3f2ef;
+}
+.cases .case1 .case-text h2, .cases .case2 .case-text h2, .cases .case3 .case-text h2, .cases .case4 .case-text h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.cases .case1 .case-text h3, .cases .case2 .case-text h3, .cases .case3 .case-text h3, .cases .case4 .case-text h3 {
+  font-size: 20px;
+  margin: 20px 0 10px 0;
+  font-weight: bold;
+}
+.cases .case1 .case-text p, .cases .case2 .case-text p, .cases .case3 .case-text p, .cases .case4 .case-text p {
+  margin: 0;
+}
+.cases .case1 {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 0 15%;
+  height: 100%;
+}
+.cases .case1 img {
+  width: 100%;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cases .case1 .case-text {
+  margin: 0 0 0 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cases .case2 {
+  margin: 2em 0;
+}
+.cases .case2 img {
+  width: 100%;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cases .case2 .case-text {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20%;
+}
+.cases .case2 .case-text h2 {
+  text-align: center;
+}
+.cases .combined {
+  display: flex;
+  justify-content: space-between;
+  margin: 10em 5em;
+}
+.cases .case3, .cases .case4 {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-intro {
+  background-image: url(../img/contact-bg.jpg);
+  background-position: center right;
+}
+
+.contact-form {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: 25vh;
+}
+.contact-form form {
+  width: 50%;
+  background-color: rgba(243, 242, 239, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form form .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+.contact-form form h1 {
+  font-size: 60px;
+  font-weight: lighter;
+  text-align: center;
+}
+.contact-form form .inputs {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-form form .inputs input {
+  font-size: 20px;
+  margin: 3vh 0;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 10px;
+  border: #306373 1px solid;
+}
+.contact-form form label {
+  width: 60%;
+}
+.contact-form form label #besked {
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  margin: 2vh 0;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  border: #306373 1px solid;
+}
+.contact-form form label fieldset {
+  border-color: #306373;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+  -webkit-margin-start: 0;
+          margin-inline-start: 0;
+  -webkit-margin-end: 0;
+          margin-inline-end: 0;
+  -webkit-padding-before: 0;
+          padding-block-start: 0;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+  -webkit-padding-end: 0;
+          padding-inline-end: 0;
+  -webkit-padding-after: 0;
+          padding-block-end: 0;
+  color: #191919;
+  font-family: "rooney-sans", sans-serif;
+  box-sizing: border-box;
+}
+.contact-form form label fieldset input:hover, .contact-form form label fieldset label:hover {
+  cursor: pointer;
+}
+.contact-form form label fieldset input[type=checkbox] {
+  margin: 0.8em 0 15px 10px;
+}
+.contact-form form label fieldset label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.contact-form form label input[type=submit] {
+  background-color: #306373;
+  color: #f3f2ef;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  width: 20%;
+  font-size: 18px;
+  transition: 0.2s ease-in-out;
+  margin-right: auto;
+  display: block;
+  margin: 0 0 1em auto;
+}
+.contact-form form label input[type=submit]:hover {
+  background-color: #292929;
+  cursor: pointer;
+}
+
+.blank {
+  height: 600px;
+}
+
+.thank-you {
+  display: block;
+  margin: 3em auto;
+  width: 50%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thank-you img {
+  width: 50%;
+}
+.thank-you h1 {
+  font-size: 42px;
+}
+.thank-you p {
+  font-size: 20px;
+}
+.thank-you a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #60c6e6;
+  z-index: 3;
+  width: 12%;
+  padding: 10px 10px;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 10px;
+  width: 20%;
+  text-shadow: 2px 2px 5px #000;
+  transition: ease-in-out 0.2s;
+}
+.thank-you a:hover {
+  background-color: #60c6e6;
+  color: #191919;
+  text-shadow: none;
+}
+
 /*MEDIA QUERY FOR TELEFON STARTER HER*/
 /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 @media screen and (max-width: 750px) {
@@ -705,7 +932,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   header nav .toggle .line3 {
     transform: rotate(45deg) translate(-10px, -5px);
   }
-  .introduction, .about-intro, .services-intro {
+  .introduction, .about-intro, .services-intro, .cases-intro {
     width: 100%;
     height: 500px;
     background-image: url(../img/SLET.jpg);
@@ -715,7 +942,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     align-items: flex-end;
     padding: 0 0 40px 0;
   }
-  .introduction a, .about-intro a, .services-intro a {
+  .introduction a, .about-intro a, .services-intro a, .cases-intro a {
     color: white;
     display: flex;
     justify-content: center;
@@ -1185,5 +1412,51 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   }
   .service-list .service img {
     width: 90%;
+  }
+  .cases-intro {
+    background-image: url(../img/cases-bg.jpg);
+    background-position: center right;
+  }
+  .cases {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em 0;
+  }
+  .cases .case1, .cases .case2, .cases .case3, .cases .case4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+    color: #f3f2ef;
+    margin: 0 0 4em 0;
+  }
+  .cases .case1 img, .cases .case2 img, .cases .case3 img, .cases .case4 img {
+    width: 100%;
+    height: auto;
+  }
+  .cases .case1 .case-text, .cases .case2 .case-text, .cases .case3 .case-text, .cases .case4 .case-text {
+    margin: 0;
+  }
+  .cases .case1 .case-text h2, .cases .case2 .case-text h2, .cases .case3 .case-text h2, .cases .case4 .case-text h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 0;
+    text-align: start;
+  }
+  .cases .case1 .case-text h3, .cases .case2 .case-text h3, .cases .case3 .case-text h3, .cases .case4 .case-text h3 {
+    font-size: 20px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+  }
+  .cases .case1 .case-text p, .cases .case2 .case-text p, .cases .case3 .case-text p, .cases .case4 .case-text p {
+    margin: 0;
+  }
+  .cases .combined {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f3f2ef;
+    margin: 0 0 4em 0;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -99,3 +99,7 @@ dots.forEach((dot) => dot.addEventListener("click", currentSlide));
         // Fade out the current image by setting its opacity to 0
         element.style.opacity = 0;
     }
+
+    function videreSend() {
+      window.location.href="contact-sent.html"
+    }
