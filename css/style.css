@@ -673,7 +673,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   top: 25vh;
 }
 .contact-form form {
-  width: 50%;
+  width: 55%;
   background-color: rgba(243, 242, 239, 0.9);
   display: flex;
   flex-direction: column;
@@ -1499,5 +1499,19 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   }
   .thank-you a {
     width: 60%;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .contact-form form {
+    width: 70%;
+  }
+  .contact-form form .inputs {
+    width: 70%;
+  }
+  .contact-form form label {
+    width: 70%;
+  }
+  .who {
+    height: 200vh;
   }
 }/*# sourceMappingURL=style.css.map */
