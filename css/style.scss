@@ -123,7 +123,7 @@ header {
     opacity: 1;
     font-size: 52px;
     text-align: center;
-    top: 72%;
+    top: 70%;
   }
 
   i:hover {
@@ -139,8 +139,9 @@ header {
 
   a {
     position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     text-align: center;
+    width: 30%;
   }
 }
 
@@ -178,7 +179,7 @@ header {
     figcaption {
       display: none;
       position: absolute;
-      top: 60%;
+      top: 55%;
       font-size: 32px;
       margin: 1em 0;
       left: 0;
@@ -226,7 +227,7 @@ header {
   .read-dots {
     width: 100%;
     position: absolute;
-    top: 170vh;
+    top: 175vh;
     height: auto;
     display: flex;
     justify-content: center
