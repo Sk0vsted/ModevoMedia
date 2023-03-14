@@ -40,7 +40,11 @@
         </header>
 
         <section class="introduction">
+            <video playsinline autoplay muted loop id="background-vid" onclick="this.paused ? this.play() : this.pause();">
+                <source src="vid/background-introduction.mp4" type="video/mp4">
+            </video>
           <a href="#" class="read-button">Hvem er vi?</a>
+          <p>Klik på videoen for at starte/stoppe</p>
         </section>
 
         <section class="title">
@@ -106,9 +110,16 @@
     </section>
 
     <section class="text-section">
-        <h4>Modevo - Moderne evolution af multimedieløsninger</h4>
-        <p>Vi sætter altid en dyd i at udarbejde kvalitetsløsninger, og sætter os altid ind i kundernes synsvinkel til hvordan vores samarbejde skal fungere. Vi er specialister i vores systemer og software, hvilket gør at vi altid tager vores moderne multimedieløsninger til nye højder. <br> <br> Du kan læse meget mere om Modevo og få et uforpligtende tilbud her! </p>
-        <a href="#" class="read-button">Læs mere</a>
+        <div class="video-section">
+            <video playsinline muted loop controls id="about-video">
+                <source src="vid/C0055.webm">
+            </video>
+        </div>
+        <div class="text-area">
+            <h4>Modevo - Moderne evolution af multimedieløsninger</h4>
+            <p>Vi sætter altid en dyd i at udarbejde kvalitetsløsninger, og sætter os altid ind i kundernes synsvinkel til hvordan vores samarbejde skal fungere. Vi er specialister i vores systemer og software, hvilket gør at vi altid tager vores moderne multimedieløsninger til nye højder. <br> <br> Du kan læse meget mere om Modevo og få et uforpligtende tilbud her! </p>
+            <a href="#" class="read-button">Læs mere</a>
+        </div>
     </section>
 
     <section class="quote">

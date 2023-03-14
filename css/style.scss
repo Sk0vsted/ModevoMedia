@@ -101,8 +101,32 @@ header {
     text-shadow: none;
     animation: underlines 2s;
   }
+}
 
+.introduction {
+  padding: 0;
+  height: 85vh;
 
+  p {
+    position: absolute;
+    color: partial.$light;
+    display: block;
+    left: 0;
+    margin: 1em 1em;
+    font-size: 20px;
+    text-shadow: 2px 2px 5px #000;
+  }
+  
+  #background-vid {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  a {
+    position: absolute;
+    bottom: 100px;
+  }
 }
 
 .title h1, .title h2, .title h3, .title h4, .title h5, .title h6 {
@@ -261,32 +285,52 @@ header {
 
 .text-section {
   @include partial.center($center: center, $align:center);
-  flex-direction: column;
   text-align: center;
-  padding: 0 30%;
   color: partial.$light;
+  height: 75vh;
 
-  h4 {
-    font-size: 28px;
-    margin: 1em 0 0.5em 0;
+
+  .text-area {
+    @include partial.center($center: center, $align:center);
+    flex-direction: column;
+    text-align: center;
+    color: partial.$light;
+    width: 40%;
+    padding: 0 4em;
+
+    h4 {
+      font-size: 28px;
+      margin: 1em 0 0.5em 0;
+    }
+
+    p {
+      font-weight: lighter;
+    }
+
+    a {
+      @include partial.readbutton($border: 4px solid partial.$cyan);
+      width: 12vw;
+      margin: 1em 0;
+      transition: ease-in-out .2s;
+    }
+
+    a:hover {
+      background-color: partial.$cyan;
+      color: partial.$dark;
+      text-shadow: none;
+      animation: underlines 2s;
+    }
   }
 
-  p {
-    font-weight: lighter;
-  }
-
-  a {
-    @include partial.readbutton($border: 4px solid partial.$cyan);
-    width: 12vw;
-    margin: 1em 0;
-    transition: ease-in-out .2s;
-  }
-
-  a:hover {
-    background-color: partial.$cyan;
-    color: partial.$dark;
-    text-shadow: none;
-    animation: underlines 2s;
+  .video-section {
+    width: 60%;
+    padding: 0 0 0 4em;
+    
+    video {
+      height: 100%;
+      width: 100%;
+      box-shadow: 5px 5px 20px 2px rgba(0,0,0,.5);
+    }
   }
 }
 
