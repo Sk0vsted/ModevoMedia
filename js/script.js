@@ -31,6 +31,8 @@ const navSlide =() => {
 }
 navSlide();
 
+
+// Slideshow med figcaption //
 const dots = Array.from(document.querySelectorAll(".dot"));
 
 let slideIndex = 1;
@@ -63,8 +65,16 @@ function showSlides(n) {
 
   slides[slideIndex - 1].classList.add("is-active");
   dots[slideIndex - 1].classList.add("is-active");
+
+  const figcaption = slides[slideIndex - 1].querySelector("figcaption");
+  figcaption.style.display = "block";
 }
+
+// Call showSlides with initial slide index value of 1
+showSlides(1);
+
 dots.forEach((dot) => dot.addEventListener("click", currentSlide));
+
 
 
 

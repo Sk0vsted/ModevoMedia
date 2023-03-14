@@ -15,7 +15,7 @@
             <nav>
                 <div class="logo">
                   <a href="index.html"><img src="img/Asset_7logoBlack.svg" alt="Logo" class="finger"></a>
-                    <a href="index.html"><img src="img/Asset_21LogoFontBlack.svg" alt="Logo"></a>
+                    <a href="index.html"><img src="img/Asset_28ModevoBlack.svg" alt="Logo"></a>
                 </div>
 
                 <div id="burger">
@@ -26,65 +26,74 @@
 
                 <ul class="nav-links">
                     <li><a href="index.html">Hjem</a></li>
-                    <li><a href="services.html">Vores arbejde</a></li>
+                    <li><a href="services.html">Vores services</a></li>
                     <li><a href="about.html">Om os</a></li>
                     <li><a href="cases.html">Cases</a></li>
                     <li><a href="contact.html">Kontakt os</a></li>
                 </ul>
 
                 <div class="header-icons">
-                    <a href="#"><i class="fas fa-headphones"></i></a>
                     <a href="#"><i class="fas fa-search"></i></a>
                 </div>
             </nav>
         </header>
 
         <section class="introduction">
-            <video playsinline autoplay muted loop id="background-vid" onclick="this.paused ? this.play() : this.pause();">
+            <video playsinline autoplay muted loop id="background-vid">
                 <source src="vid/background-introduction.mp4" type="video/mp4">
             </video>
-          <a href="#" class="read-button">Hvem er vi?</a>
-          <p>Klik på videoen for at starte/stoppe</p>
+          <a href="services.html" class="read-button">Vores services</a>
+          <i class="fa-regular fa-pause-circle" onclick="var vid = document.getElementById('background-vid'); var icon = this; if (vid.paused) { vid.play(); icon.classList.remove('fa-circle-play'); icon.classList.add('fa-pause-circle'); } else { vid.pause(); icon.classList.remove('fa-pause-circle'); icon.classList.add('fa-circle-play'); }"></i>
         </section>
 
         <section class="title">
-            <h1>Cases</h1>
         </section>
 
 
 <section class="slideshow">
-    <div class="slide fade is-active">
-      <figure class="slide-image">
-        <img src="img/slide1.jpg" alt="Slide 1"/>
-      </figure>
-    </div>
+    
+    <div class="slide fade is-active" data-caption-title="Cases" data-caption-description="Asd">
+        <h1>Cases</h1>
+        <figure class="slide-image">
+          <img src="img/slide1.jpg" alt="Slide 1"/>
+          <figcaption class="description is-active">Vi har massere af erhvervserfaring gennem vores tidligere cases.</figcaption>
+        </figure>
+      </div>
 
     <div class="slide fade">
+        <h1>StenovnPizza</h1>
       <figure class="slide-image">
         <img src="img/slide2.jpg" alt="Slide 2"/>
+        <figcaption class="description">Vi har udarbejdet en reklamefilm og en brandingstrategi for StenovnPizza</figcaption>
       </figure>
     </div>
 
     <div class="slide fade">
+        <h1>HusOgHjem A/S</h1>
         <figure class="slide-image">
             <img src="img/slide3.jpg" alt="Slide 3"/>
+            <figcaption class="description">Vores samarbejde med HusOgHjem A/S bød på udarbejdelse af en moderne hjemmeside og en reklamefilm</figcaption>
         </figure>
     </div>
 
     <div class="slide fade">
+        <h1>Tømmermændene ApS</h1>
         <figure class="slide-image">
             <img src="img/slide4.jpg" alt="Slide 4"/>
+            <figcaption class="description">Vi har udarbejdet grafisk design og en digital marketingsstrategi for Tømmermændene ApS </figcaption>
         </figure>
     </div>
 
     <div class="slide fade">
+        <h1>Håndmadder ApS</h1>
         <figure class="slide-image">
-            <img src="img/slide2.jpg" alt="Slide 5"/>
+            <img src="img/slide5.jpg" alt="Slide 5"/>
+            <figcaption class="description">Vores samarbejde med Håndmadder ApS bød på en omfattende udarbejdelse af en digital brandingstrategi.</figcaption>
         </figure>
     </div>
 
     <div class="read-dots">
-      <a href="#" class="read-button">Læs mere</a>
+      <a href="cases.html" class="read-button">Læs mere</a>
 
       <div class="dots-container">
         <span class="dot is-active" onclick="currentSlide(1)"></span>
@@ -97,16 +106,24 @@
   </section>
 
     <section class="title">
-        <h2>Om os</h2>
     </section>
 
     <section class="about">
-        <a href="#" class="read-button">Læs mere</a>
+
+        <div class="about-text">
+            <h1>Om os</h1>
+            <p>Læs mere om teamet som står bag Modevo Media</p>
+        </div>
+
+        <div class="about-button">
+            <a href="about.html" class="read-button">Læs mere</a>
+        </div>
+
     </section>
 
     <section class="services">
         <h3>Services</h3>
-        <a href="#" class="read-button">Læs mere</a>
+        <a href="services.html" class="read-button">Læs mere</a>
     </section>
 
     <section class="text-section">
@@ -117,8 +134,8 @@
         </div>
         <div class="text-area">
             <h4>Modevo - Moderne evolution af multimedieløsninger</h4>
-            <p>Vi sætter altid en dyd i at udarbejde kvalitetsløsninger, og sætter os altid ind i kundernes synsvinkel til hvordan vores samarbejde skal fungere. Vi er specialister i vores systemer og software, hvilket gør at vi altid tager vores moderne multimedieløsninger til nye højder. <br> <br> Du kan læse meget mere om Modevo og få et uforpligtende tilbud her! </p>
-            <a href="#" class="read-button">Læs mere</a>
+            <p>Vi sætter altid en dyd i at udarbejde kvalitetsløsninger, og sætter os altid ind i kundernes synsvinkel til hvordan vores samarbejde skal fungere. Vi er specialister i vores systemer og software, hvilket gør at vi altid tager vores moderne multimedieløsninger til nye højder. <br> <br> Du kan kontakte os, og få et uforpligtende tilbud her! </p>
+            <a href="contact.html" class="read-button">Kontakt os</a>
         </div>
     </section>
 
@@ -134,7 +151,6 @@
                 <a href="geo:-10.485784,105.666729">Egernvej 8, 2. TV. <br>7100 Vejle</a>
                 <a href="tel:+4530303030">Telefon: +45 30 30 30 30</a>
                 <a href="mailto: Modevo@media.dk">Email: Modevo@Media.dk</a>
-                <a href="https://www.modevo.dk">Website: www.Modevo.dk</a>
                 <a href="#">CVR: 45782376</a>
             </div>
         </div>
@@ -154,7 +170,7 @@
               </form>
               <img src="img/Asset_7logoWhite.svg" alt="Logo hvid">
               <div class="policy">
-                <p>Modevo © 2013</p>
+                <p>Modevo © 2023</p>
                 <a href="#">Cookie politik</a>
                 <a href="#">Privatlivspolitik</a>
                 <a href="#">Handelsbetingelser</a>
@@ -165,11 +181,11 @@
 
             <div class="navigation">
                 <h6>Navigation</h6>
-                <a href="#">- Hjem</a>
-                <a href="#">- Vores arbejde</a>
-                <a href="#">- Om os</a>
-                <a href="#">- Cases</a>
-                <a href="#">- Kontakt os</a>
+                <a href="index.html">- Hjem</a>
+                <a href="services.html">- Vores arbejde</a>
+                <a href="about.html">- Om os</a>
+                <a href="cases.html">- Cases</a>
+                <a href="contact.html">- Kontakt os</a>
             </div>
 
             <div class="kompetencer">
