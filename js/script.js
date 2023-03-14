@@ -31,6 +31,38 @@ const navSlide =() => {
 }
 navSlide();
 
+// Get references to all the image elements
+var teamImages = document.getElementsByClassName("member-img");
+
+// Loop through the images and bind the changeImage function to the mouseover and mouseout events
+for (var i = 0; i < teamImages.length; i++) {
+    teamImages[i].addEventListener("mouseover", function() {
+        changeImage(this, this.src.replace("-1.jpg", "-2.jpg"));
+    });
+    teamImages[i].addEventListener("mouseout", function() {
+        changeImage(this, this.src.replace("-2.jpg", "-1.jpg"));
+    });
+}
+
+function changeImage(element, newSrc) {
+    // Create a new image object
+    var img = new Image();
+
+    // When the new image is loaded, set the src attribute of the element
+    img.onload = function() {
+      setTimeout(function() {
+        element.src = newSrc;
+        element.style.opacity = 1;
+      }, 100);
+    }
+
+    // Set the src attribute of the new image object to the new source
+    img.src = newSrc;
+
+    // Fade out the current image by setting its opacity to 0
+    element.style.opacity = 0;
+}
+
 
 // Slideshow med figcaption //
 const dots = Array.from(document.querySelectorAll(".dot"));
@@ -74,41 +106,6 @@ function showSlides(n) {
 showSlides(1);
 
 dots.forEach((dot) => dot.addEventListener("click", currentSlide));
-
-
-
-
-    // Get references to all the image elements
-    var teamImages = document.getElementsByClassName("member-img");
-
-    // Loop through the images and bind the changeImage function to the mouseover and mouseout events
-    for (var i = 0; i < teamImages.length; i++) {
-        teamImages[i].addEventListener("mouseover", function() {
-            changeImage(this, this.src.replace("-1.jpg", "-2.jpg"));
-        });
-        teamImages[i].addEventListener("mouseout", function() {
-            changeImage(this, this.src.replace("-2.jpg", "-1.jpg"));
-        });
-    }
-
-    function changeImage(element, newSrc) {
-        // Create a new image object
-        var img = new Image();
-
-        // When the new image is loaded, set the src attribute of the element
-        img.onload = function() {
-          setTimeout(function() {
-            element.src = newSrc;
-            element.style.opacity = 1;
-          }, 100);
-        }
-
-        // Set the src attribute of the new image object to the new source
-        img.src = newSrc;
-
-        // Fade out the current image by setting its opacity to 0
-        element.style.opacity = 0;
-    }
 
     function videreSend() {
       window.location.href="contact-sent.html"

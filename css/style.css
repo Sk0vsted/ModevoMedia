@@ -109,7 +109,7 @@ header #burger {
   padding: 0;
   height: 85vh;
 }
-.introduction i {
+.introduction i, .introduction h1 {
   position: absolute;
   color: #f3f2ef;
   display: block;
@@ -119,6 +119,12 @@ header #burger {
   text-shadow: 2px 2px 5px #000;
   opacity: 0.1;
   transition: 0.2s ease-in-out;
+}
+.introduction h1 {
+  opacity: 1;
+  font-size: 52px;
+  text-align: center;
+  top: 72%;
 }
 .introduction i:hover {
   opacity: 1;
@@ -133,6 +139,7 @@ header #burger {
 .introduction a {
   position: absolute;
   bottom: 100px;
+  text-align: center;
 }
 
 .title {
@@ -1062,6 +1069,10 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   .introduction i, .about-intro i, .services-intro i, .cases-intro i {
     font-size: 90px;
   }
+  .introduction h1, .about-intro h1, .services-intro h1, .cases-intro h1 {
+    font-size: 25px;
+    top: 63%;
+  }
   .title {
     width: 100%;
     height: 100%;
@@ -1085,6 +1096,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   .slideshow .slide h1 {
     top: 25%;
     font-size: 40px;
+    text-align: center;
   }
   .slideshow .slide figcaption {
     font-size: 22px;
@@ -1638,7 +1650,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     width: 50%;
   }
 }
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) and (min-width: 750px) {
   .contact-form form {
     width: 70%;
   }
@@ -1649,6 +1661,6 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     width: 70%;
   }
   .who {
-    height: 200vh;
+    height: 400vh;
   }
 }/*# sourceMappingURL=style.css.map */

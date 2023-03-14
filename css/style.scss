@@ -107,7 +107,7 @@ header {
   padding: 0;
   height: 85vh;
 
-  i {
+  i, h1 {
     position: absolute;
     color: partial.$light;
     display: block;
@@ -117,6 +117,13 @@ header {
     text-shadow: 2px 2px 5px #000;
     opacity: 0.1;
     transition: 0.2s ease-in-out;
+  }
+
+  h1 {
+    opacity: 1;
+    font-size: 52px;
+    text-align: center;
+    top: 72%;
   }
 
   i:hover {
@@ -133,6 +140,7 @@ header {
   a {
     position: absolute;
     bottom: 100px;
+    text-align: center;
   }
 }
 
@@ -1098,6 +1106,11 @@ footer {
     i {
       font-size: 90px;
     }
+
+    h1 {
+      font-size: 25px;
+      top: 63%;
+    }
   }
 
   .title {
@@ -1123,6 +1136,7 @@ footer {
       h1 {
         top: 25%;
         font-size: 40px;
+        text-align: center;
       }
 
       figcaption {
@@ -1682,7 +1696,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1400px) and (min-width: 750px) {
   .contact-form {
     form {
       width: 70%;
@@ -1698,6 +1712,6 @@ footer {
   }
 
   .who {
-    height: 200vh;
+    height: 400vh;
   }
 }
