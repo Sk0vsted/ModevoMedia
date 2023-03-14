@@ -1094,9 +1094,10 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: none;
   }
   .slideshow .slide h1 {
-    top: 25%;
     font-size: 40px;
     text-align: center;
+    width: 100%;
+    top: 25%;
   }
   .slideshow .slide figcaption {
     font-size: 22px;
