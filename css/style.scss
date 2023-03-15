@@ -139,7 +139,7 @@ header {
 
   a {
     position: absolute;
-    bottom: 70px;
+    bottom: 100px;
     text-align: center;
     width: 30%;
   }
@@ -1100,8 +1100,9 @@ footer {
 
     a {
       @include partial.readbutton($border: 4px solid partial.$cyan);
-      width: 40%;
+      width: 70%;
       text-shadow: 2px 2px 5px #000;
+      bottom: 120px;
     }
 
     i {
@@ -1698,7 +1699,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1400px) and (min-width: 750px) {
+@media screen and (max-width: 1700px) and (min-width: 750px) {
   .contact-form {
     form {
       width: 70%;
@@ -1715,5 +1716,12 @@ footer {
 
   .who {
     height: 400vh;
+  }
+
+  .introduction {
+
+    a {
+      bottom: 70px;
+    }
   }
 }
