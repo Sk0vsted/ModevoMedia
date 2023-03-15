@@ -51,7 +51,7 @@ header nav .nav-links a {
   transition: ease-in-out 0.1s;
 }
 header nav .nav-links a:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 header nav .header-icons {
   display: flex;
@@ -65,7 +65,7 @@ header nav .header-icons i {
   transition: ease-in-out 0.1s;
 }
 header nav .header-icons i:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 header #burger {
   display: none;
@@ -86,7 +86,7 @@ header #burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -99,7 +99,7 @@ header #burger {
   transition: ease-in-out 0.2s;
 }
 .introduction a:hover, .about-intro a:hover, .services-intro a:hover, .cases-intro a:hover, .contact-intro a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
   animation: underlines 2s;
@@ -228,7 +228,7 @@ header #burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -241,7 +241,7 @@ header #burger {
   transition: ease-in-out 0.2s;
 }
 .slideshow .read-dots a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
   animation: underlines 2s;
@@ -271,7 +271,7 @@ header #burger {
 }
 .slideshow .read-dots .dot.is-active,
 .slideshow .read-dots .dot:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
 }
 
 .about {
@@ -308,7 +308,7 @@ header #burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -319,7 +319,7 @@ header #burger {
   transition: ease-in-out 0.2s;
 }
 .about .about-button a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
   animation: underlines 2s;
@@ -346,7 +346,7 @@ header #burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -357,7 +357,7 @@ header #burger {
   transition: ease-in-out 0.2s;
 }
 .services a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
   animation: underlines 2s;
@@ -393,7 +393,7 @@ header #burger {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -405,7 +405,7 @@ header #burger {
   transition: ease-in-out 0.2s;
 }
 .text-section .text-area a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
   animation: underlines 2s;
@@ -478,7 +478,7 @@ footer .footer-left a {
   transition: 0.2s ease-in-out;
 }
 footer .footer-left a:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 footer .footer-left a:nth-of-type(5) {
   margin: 0 0 20px 0;
@@ -504,7 +504,7 @@ footer .footer-middle .socials i {
   transition: 0.2s ease-in;
 }
 footer .footer-middle .socials i:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 footer .footer-middle form {
   display: flex;
@@ -533,7 +533,7 @@ footer .footer-middle form button {
   transition: 0.2s ease-in-out;
 }
 footer .footer-middle form button:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
 }
 footer .footer-middle img {
   width: 5%;
@@ -554,7 +554,7 @@ footer .footer-middle .policy a, footer .footer-middle .policy p {
   transition: 0.2s ease-in-out;
 }
 footer .footer-middle .policy a:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 footer .footer-right {
   display: flex;
@@ -582,7 +582,7 @@ footer .footer-right .navigation a, footer .footer-right .kompetencer a {
   transition: 0.2s ease-in-out;
 }
 footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:hover {
-  color: #60c6e6;
+  color: #2EB2DA;
 }
 
 .bottom-footer {
@@ -672,7 +672,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -686,7 +686,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   transition: ease-in-out 0.2s;
 }
 .service-list .service .service-text a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
 }
 .service-list .service img {
@@ -903,7 +903,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 4px solid #60c6e6;
+  border: 4px solid #2EB2DA;
   z-index: 3;
   width: 12%;
   padding: 10px 10px;
@@ -915,7 +915,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   transition: ease-in-out 0.2s;
 }
 .thank-you a:hover {
-  background-color: #60c6e6;
+  background-color: #2EB2DA;
   color: #191919;
   text-shadow: none;
 }
@@ -1057,7 +1057,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1135,7 +1135,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1150,7 +1150,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1189,7 +1189,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
   }
   .slideshow .dot.is-active,
   .slideshow .dot:hover {
-    background-color: #60c6e6;
+    background-color: #2EB2DA;
   }
   .slideshow .fade {
     animation-name: fade;
@@ -1239,7 +1239,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1275,7 +1275,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1312,7 +1312,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1538,7 +1538,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 4px solid #60c6e6;
+    border: 4px solid #2EB2DA;
     z-index: 3;
     width: 12%;
     padding: 10px 10px;
@@ -1552,7 +1552,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     transition: ease-in-out 0.2s;
   }
   .service-list .service .service-text a:hover {
-    background-color: #60c6e6;
+    background-color: #2EB2DA;
     color: #191919;
   }
   .service-list .service img {
@@ -1653,7 +1653,7 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     width: 50%;
   }
 }
-@media screen and (max-width: 1700px) and (min-width: 750px) {
+@media screen and (max-width: 1600px) and (min-width: 750px) {
   .contact-form form {
     width: 70%;
   }
@@ -1664,9 +1664,12 @@ footer .footer-right .navigation a:hover, footer .footer-right .kompetencer a:ho
     width: 70%;
   }
   .who {
-    height: 400vh;
+    height: 175vh;
   }
   .introduction a {
     bottom: 70px;
+  }
+  .slideshow {
+    top: 170vh;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -1699,7 +1699,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1700px) and (min-width: 750px) {
+@media screen and (max-width: 1600px) and (min-width: 750px) {
   .contact-form {
     form {
       width: 70%;
@@ -1715,7 +1715,7 @@ footer {
   }
 
   .who {
-    height: 400vh;
+    height: 175vh;
   }
 
   .introduction {
@@ -1723,5 +1723,9 @@ footer {
     a {
       bottom: 70px;
     }
+  }
+
+  .slideshow {
+    top: 170vh;
   }
 }
